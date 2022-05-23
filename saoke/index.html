@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Thống kê</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" type="image/x-icon" href="https://icon2.cleanpng.com/20180803/gxz/kisspng-computer-icons-statistics-bar-chart-sales-analytics-chart-statistics-stats-icon-icon-se-5b64013b5370a9.0343716615332805713418.jpg">
+<style>
+body {
+  background-color: #FFF8DC;
+  margin: 200;
+  font-family: Times new roman , sans-serif;
+  font-size: 125%;
+}
+
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: black;
+}
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+/* Style the content */
+.content {
+  background-color: #ddd;
+  padding: 10px;
+}
+
+/* Style the footer */
+.footer {
+  background-color: white;
+  padding: 10px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: black;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/**********************************/
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+</style>
+
+<script >
+  
+function kt_Sach1()
+    {
+        var request = new XMLHttpRequest();
+        var urlHere = " ";
+        urlHere = "https://api.thingspeak.com/channels/1740403/feeds.json";
+        request.open('GET', urlHere, true);
+        request.onload = function() {
+            if (request.status == 200) {
+                var data = JSON.parse(request.responseText);
+                var length = data.feeds.length;
+                var x = document.getElementById("customers").rows[1].cells;
+                console.log(data);
+                 x[2].innerHTML = data.feeds[length-1].field1;
+                 x[3].innerHTML = data.feeds[length-1].field2;
+                 if (data.feeds[length-1].field3==0) {
+                    x[4].innerHTML = "Đã mượn";
+                 }else{
+                    x[4].innerHTML = "Sẵn sàng";
+                 }
+                document.getElementById("kt_Sach1").innerHTML =+length;
+            };
+        }
+        request.send();
+    }
+ 
+ function kt_Sach2()
+    {
+        var request = new XMLHttpRequest();
+        var urlHere = " ";
+        urlHere = "https://api.thingspeak.com/channels/1740404/feeds.json";
+        request.open('GET', urlHere, true);
+        request.onload = function() {
+            if (request.status == 200) {
+                var data = JSON.parse(request.responseText);
+                var length = data.feeds.length;
+                var x = document.getElementById("customers").rows[2].cells;
+                console.log(data);
+                 x[2].innerHTML = data.feeds[length-1].field1;
+                 x[3].innerHTML = data.feeds[length-1].field2;
+                if (data.feeds[length-1].field3==0) {
+                    x[4].innerHTML = "Đã mượn";
+                 }else{
+                    x[4].innerHTML = "Sẵn sàng";
+                 }
+                document.getElementById("kt_Sach2").innerHTML =+length;
+                 
+            };
+        }
+        request.send();
+    }
+
+  function kt_Sach3()
+    {
+        var request = new XMLHttpRequest();
+        var urlHere = " ";
+        urlHere = "https://api.thingspeak.com/channels/1743361/feeds.json";
+        request.open('GET', urlHere, true);
+        request.onload = function() {
+            if (request.status == 200) {
+                var data = JSON.parse(request.responseText);
+                var length = data.feeds.length;
+                var x = document.getElementById("customers").rows[3].cells;
+                console.log(data);
+                 x[2].innerHTML = data.feeds[length-1].field1;
+                 x[3].innerHTML = data.feeds[length-1].field2;
+                if (data.feeds[length-1].field3==0) {
+                    x[4].innerHTML = "Đã mượn";
+                 }else{
+                    x[4].innerHTML = "Sẵn sàng";
+                 }
+                document.getElementById("kt_Sach3").innerHTML =+length; 
+                 
+            };
+        }
+        request.send();
+    }
+
+
+</script>
+
+</head>
+
+<body>
+
+<div class="navbar">
+  <a href="../index.html"><i class="fa fa-fw fa-home"></i>Trang chủ</a>
+  <a href="../info/index.html">Thành viên nhóm</a>
+  <div class="dropdown">
+    <button class="dropbtn">Đồ án 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="active" href="../muon/index.html" style="color: white;">Thông tin mượn</a>
+      <a href="../tra/index.html#"style="color: white;">Thông tin trả</a>
+      <a href="index.html"style="color: white;">Số liệu thống kê</a>
+    </div>
+  </div>
+  <a href="../lienhe/index.html">Liên hệ</a>
+</div><br>
+  </form>
+    <form name="form2">
+          <input type = "button" value = "Kiểm tra" onclick = "kt_Sach1(),kt_Sach2(),kt_Sach3()">
+  </form>
+<p> Số lần mượn quyển 1:<p>
+<p id="kt_Sach1"> </p>
+<p> Số lần mượn quyển 2:<p>
+<p id="kt_Sach2"> </p>
+<p> Số lần mượn quyển 3:<p>
+<p id="kt_Sach3"> </p>
+<p> Trạng thái của sách:<p>
+
+
+
+   <table id="customers">
+    <tr>
+      <th style="text-align:center;">Số thứ tự</th>
+      <th style="text-align:center;">Tên quyển</th>
+      <th style="text-align:center;">Tên khách hàng</th>
+      <th style="text-align:center;">Số điện thoại</th>
+      <th style="text-align:center;">Trạng thái</th>
+    </tr>
+    <tr >
+      <td style="text-align:center;">1</td>
+      <td style="text-align:center;">Quyển số 1</td>
+      <td style="text-align:center;"></td>
+      <td style="text-align:center;"></td>
+      <td style="text-align:center;"></td>
+    </tr>
+     <tr>
+      <td style="text-align:center;">2</td>
+      <td style="text-align:center;">Quyển số 2</td>
+      <td style="text-align:center;"></td>
+      <td style="text-align:center;"></td>
+      <td style="text-align:center;"></td>
+    </tr>
+     <tr>
+      <td style="text-align:center;">3</td>
+      <td style="text-align:center;">Quyển số 3</td>
+      <td style="text-align:center;"></td>
+      <td style="text-align:center;"></td>
+      <td style="text-align:center;"></td>
+    </tr>
+  </table>
+
+
+</body>
+</html> 

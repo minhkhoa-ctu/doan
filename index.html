@@ -1,0 +1,1103 @@
+
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Trang chủ</title>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="icon" type="image/x-icon" href="https://cdn.pixabay.com/photo/2015/12/28/02/58/home-1110868_960_720.png">
+ </head>
+
+ <style>
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     vFON
+     font-family: 'Times New Roman', Times, serif;
+     color: #FFF;
+ }
+a{
+     text-decoration: none;
+ }
+ul{
+     list-style: none;
+ }
+.navbar {
+  overflow: hidden;
+  background-color: black;
+  border-bottom: 4px solid #f3abf5;
+}
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.active {
+  background-color: #04AA6D;
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: black;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.logo img{
+     margin-left: 100px;
+ }
+.menu ul li {
+     display: inline-block;
+     padding: 0 25px;
+     cursor: pointer;
+     font-size: 19px;
+     font-weight: 500;
+     line-height: 80px;
+     align-items: center;
+ }
+ .menu ul li:hover{
+     background-color: #f3ef51;
+ }
+ .banner{
+     position: absolute;
+     color: #fff;
+ }
+.noi-dung h1{
+     margin-top: 100px;
+     font-size: 16px;
+     color: #FFF;
+     font-weight: 400;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+ }
+.noi-dung h3{
+     font-size: 51px;
+     position: relative;
+     color: #FFF;
+     margin-top: 30px;
+     font-weight: 500;
+     line-height: 1;
+ }
+.noi-dung p {
+     font-size: 16px;
+     margin: 30px 30px 30px 0;
+     letter-spacing: 1px;
+     color: #FFF;
+     padding-right: 100px;
+ }
+ .hinh-anh{
+     margin-top: 150px;
+     float: right;
+     padding-right: 50px;
+ }
+.hinh-anh img{
+     width: 90%;
+     height: auto;
+ }
+ .btn-group{
+     display: flex;
+     width: 100%;
+     position: relative;
+     bottom: -25px;
+ }
+ .btn-group .signup-btn{
+     cursor: pointer;
+     display: block;
+     color: #FFF;
+     text-align: center;
+     font-size: 16px;
+     font-weight: 700;
+     border-radius: 32px;
+     background-color: #ffa037;
+     padding: 15px 50px;
+ }
+.btn-group .play-btn{
+     margin-left: 40px;
+     display: inline-flex;
+ }
+ .btn-group span{
+     color: #FFF;
+     font-size: 15px;
+     font-weight: 500;
+     margin: auto 20px;
+     cursor: pointer;
+ }
+.play-btn-inner{
+     height: 50px;
+     width: 50px;
+     border: 2px solid transparent;
+     border-radius: 50%;
+     background-color: #000;
+ }
+ .play-btn-inner i{
+     padding: 15px 19px;
+     font-size: 16px;
+     cursor: pointer;
+     color: #fff;
+ } 
+ .dich-vu {
+     top: 80%;
+     width: 60%;
+     text-align: center;
+     margin-top: 50px;
+     max-width: 1000px;
+     min-width: 1000px;
+ }
+.dich-vu h1 {
+    color: #fff;
+ }
+.dich-vu ul {
+     display: inline-flex;
+     margin: 30px auto;
+     text-align: center;
+ }
+.dich-vu ul li{
+     margin: 0 50px;
+     cursor: pointer;
+     width: 33.33%;
+ }
+ .dich-vu ul li p{
+     font-size: 16px;
+     margin-top: 20px;
+     color: #FFF;
+     font-weight: 500;
+ }
+ .dich-vu ul li img{
+    width: 200px;
+    padding: 30px;
+    border: #1ee1d6 solid 6px;
+    border-radius: 20%;
+    transition: ease-in all 0.5s;
+ }
+ .dich-vu ul li img:hover{
+    border: #43eee4 solid 6px;
+    transition: ease-in all 0.5s;
+    background: #2e428b;
+ }
+ .social-icon{
+     right: 30px;
+     top:30%;
+ }
+ .social-icon ul li{
+     margin-top: 5px;
+     text-align: center;
+ }
+.social-icon ul li a{
+     color: #000;
+     padding: 10px;
+     display: block;
+     font-size: 26px;
+ }
+ .social-icon ul li a:hover{
+     background-color: #f3ef51;
+ }
+
+
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Times New Roman", Times, serif;
+ }
+body{
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     min-height: 100vh;
+     flex-direction: column;
+     background-color: #0E5B28;
+ }
+footer{
+
+     width: 100%;
+     height: auto;
+     padding: 50px 100px;
+     background: #111;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+ }
+footer .container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+
+ }
+footer  .container .noi-dung.about{
+     width:33.33%;
+ }
+ footer .container .noi-dung.about h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+ footer .container .noi-dung.about h2:before{
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 50px;
+     height: 2px;
+     background: #f00;
+ }
+footer .container .noi-dung.about p{
+     color: #999;
+ }
+ .social-icon{
+     margin-top: 20px;
+     display: flex;
+ }
+.social-icon li {
+     list-style: none;
+ }
+ .social-icon li a{
+     display: inline-block;
+     width: 40px;
+     height: 40px;
+     background: #222;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-right: 10px;
+     text-decoration: none;
+     border-radius: 4px;
+ }
+.social-icon li a:hover{
+     background: #f00;
+ }
+.social-icon li a .fa{
+     color: #fff;
+     font-size: 20px;
+ }
+.links h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+
+ .links h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+.links h2::before{
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 50px;
+     height: 2px;
+     background: #f00;
+ }
+.links{
+    width: 33.33%;
+ }
+ .links ul li{
+     list-style: none;
+ }
+ .links ul li a{
+     color: #999;
+     text-decoration: none;
+     margin-bottom: 10px;
+     display: inline-block;
+ }
+.links ul li a:hover{
+     color: #fff;
+ }
+
+ .contact h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+.contact h2::before{
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 50px;
+     height: 2px;
+     background: #f00;
+ }
+.contact{
+     width: 33.33%;
+     margin-right: 0 !important;
+ }
+.contact .info{
+     position: relative;
+ }
+ .contact .info li{
+     display: flex;
+     margin-bottom: 16px;
+ }
+ .contact .info li span:nth-child(1) {
+     color: #fff;
+     font-size: 20px;
+     margin-right: 10px;
+ }
+.contact .info li span{
+     color: #999;
+ }
+.contact .info li a{
+     color: #999;
+     text-decoration: none;
+ }
+
+ .btn {
+     display: inline-block;
+     background: transparent;
+     color: inherit;
+     font: inherit;
+     border: 0;
+     outline: 0;
+     padding: 0;
+     margin-top:16px;
+     transition: all 200ms ease-in;
+     cursor: pointer;
+ }
+ .btn--primary {
+     background: #222;
+     color: #fff;
+     box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+     border-radius: 2px;
+     padding: 8px 24px;
+ }
+ .btn--primary:hover {
+     background: #f00;
+ }
+ .btn--primary:active {
+     background: #f00;
+     box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+ }
+.form__field {
+     width: 90%;
+     background: #fff;
+     color: #a3a3a3;
+     font: inherit;
+     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+     border: 0;
+     outline: 0;
+     padding: 8px 4px;
+ }
+ * {box-sizing:border-box}
+ .slideshow-container {
+   margin-top: 100px;
+   max-width: 1000px;
+   position: relative;
+   float: right;
+ }
+ .mySlides {
+   display: none;
+ }
+ .prev, .next {
+   cursor: pointer;
+   position: absolute;
+   top: 40%;
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+ }
+ .next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+ }
+ .prev:hover, .next:hover {
+   background-color: rgba(0,0,0,0.8);
+ }
+ .text {
+   color: #f2f2f2;
+   font-size: 15px;
+   padding: 8px 12px;
+   position: absolute;
+   bottom: 15px;
+   width: 100%;
+   text-align: center;
+ }
+ .numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+ }
+ .dot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 2px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+ }
+.active, .dot:hover {
+   background-color: #717171;
+ }
+ .fade {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
+ }
+ .read_more {
+    margin-top: 15px;
+    font-size: 17px;
+    background-color: #43eee4;
+    color: #fff;
+    width: 100%;
+    max-width: 164px;
+    text-align: center;
+    display: inline-block;
+    transition: ease-in all 0.5s;
+    font-weight: 500;
+    border-radius: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.dich-vu ul li:hover .read_more {
+    background-color: #2e3192;
+    transition: ease-in all 0.5s;
+}
+
+.pagecontent {
+    padding: 60px;
+    position: relative;
+    width: 53%;
+    margin-top: 50px;
+    max-width: 1000px;
+    min-width: 1000px;
+}
+
+.half-box {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: bottom;
+    margin-top: 0px;
+}
+.rounded-list {
+    list-style: none;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.rounded-list ol {
+    margin: 0 0 0 40px;
+}
+.rounded-list li {
+    margin-bottom: 30px;
+}
+.rounded-list > li:last-child {
+    margin-bottom: 0px;
+}
+.rounded-list > li > ol {
+    margin-top: 30px;
+}
+
+.rounded-list span{
+    position: relative;
+    display: inline-block;
+    padding: .6em 1.2em .6em 3em;
+    margin: 0px;
+    font-size: 16px;
+}
+.rounded-list span{
+    background: #0049ed;
+    color:#fff;
+}
+.rounded-list span:before {
+    background: #3d84c1;
+    border: 0.3em solid #fff;
+    color: #fff;
+}
+.pagecontent {
+    background: url(https://i.imgur.com/ObF2iYU.jpg);
+    height: 450px;
+}
+
+.rounded-list span:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.5em;
+    height: 2.5em;
+    width: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 2em;
+    font-size: 18px;
+}
+ol {
+    counter-reset: li;
+    padding: 0;
+}
+.rounded-list li {
+    margin-bottom: 30px;
+}
+
+.footer-info {
+    position: relative;
+    width: 80%;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.social-icons {
+    list-style-type:none;
+    display:inline-block;
+    margin:0px;
+    padding:0px;
+    float:right;
+}
+.social-icons li {
+    float:left;
+    display:block;
+    margin:0px 0px 0px 5px;
+    padding:0;
+}
+.social-icons li img {
+    width:32px;
+    height:auto;
+    vertical-align: bottom;
+}
+.social-icon {
+    -webkit-transition:all 0.2s ease-in-out;
+    -moz-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+    -ms-transition:all 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out;
+}
+.social-icon:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+#accordion-container {
+    padding: 0px;
+    margin: 40px 0px 10px 0px;
+    width: 100%;
+    position: relative;
+    margin-top: -50px;
+}
+
+.accordion-header {
+    margin: 0px;
+    padding: 20px 20px 20px 0px;
+    cursor: pointer;
+    word-spacing: 0.2em;
+    -webkit-transition:color 0.2s ease-in-out;
+    -moz-transition:color 0.2s ease-in-out;
+    -o-transition:color 0.2s ease-in-out;
+    -ms-transition:color 0.2s ease-in-out;
+    transition:color 0.2s ease-in-out;
+    font-size: 16px;
+}
+.active-header {
+    background: url(https://i.imgur.com/iP0rmAU.png);
+    background-repeat: no-repeat;
+    background-position: right 50%;
+}
+.inactive-header {
+    background: url(https://i.imgur.com/KKjqxvz.png);
+    background-repeat: no-repeat;
+    background-position: right 50%;
+}
+.inactive-header:hover {
+    background: url(https://i.imgur.com/KKjqxvz.png);
+    background-repeat: no-repeat;
+    background-position: right 50%;
+}
+.accordion-content {
+    display: none;
+    padding: 40px 0px 40px 0px;
+    width: 100%;
+}
+.accordion-header {
+    color: #fff;
+    border-bottom: 1px solid #ed6767;
+}
+.accordion-header:hover {
+    color:#fff;
+}
+.active-header {
+    color:#fff;
+}
+.credits {
+    float: left;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    line-height: 53px;
+    font-size: 12px;
+    color: #bbbbbb;
+}
+.subtitle {
+    position: relative;
+    background-size: 40px 40px;
+    -webkit-backface-visibility: hidden;
+}
+.subtitle h1,.subtitle h2,.subtitle h3,.subtitle h4,.subtitle h5,.subtitle h6 {
+    margin: 0px !important;
+    line-height: 1;
+    position: relative;
+    padding: 30px 60px;
+    color:  #FFF;
+}
+.subtitle {
+    background-color: #414141;
+    max-width: 1000px;
+    min-width: 1000px;
+}
+.subtitle.light {
+    background-color: #ed6767;
+    border-bottom: 3px solid rgba(255,255,255,0.3);
+}
+#rotator-container {
+    position: relative;
+    margin-top: -3px;
+    max-width: 1000px;
+    min-width: 1000px;
+}
+.cbp-qtrotator {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+}
+.cbp-qtrotator .cbp-qtcontent {
+    position: absolute;
+    padding: 83px 60px 80px 60px;
+    top: 0;
+    z-index: 0;
+    opacity: 0;
+    width: 100%;
+    vertical-align: top;
+}
+.no-js .cbp-qtrotator .cbp-qtcontent {
+    border-bottom: none;
+}
+.cbp-qtrotator .cbp-qtcontent.cbp-qtcurrent,
+.no-js .cbp-qtrotator .cbp-qtcontent {
+    position: relative; 
+    z-index: 100;
+    pointer-events: auto;
+    opacity: 1;
+}
+.cbp-qtrotator .cbp-qtcontent:before,
+.cbp-qtrotator .cbp-qtcontent:after {
+    content: " ";
+    display: table;
+}
+.cbp-qtrotator .cbp-qtcontent:after {
+    clear: both;
+}
+.cbp-qtprogress {
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    top: 0;
+    z-index: 9;
+}
+.cbp-qtrotator p {
+    font-size: 20px;
+    font-style: italic;
+}
+.cbp-qtrotator .blockquote {
+    margin: 0;
+    padding: 0;
+}
+.cbp-qtrotator .blockquote .footer {
+    font-size: 20px;
+    float: right;
+    vertical-align: bottom;
+    margin: 0px;
+    line-height: 1;
+}
+.cbp-qtrotator .blockquote .footer:before {
+    content: '― ';
+}
+.cbp-qtrotator .cbp-qtcontent .img-diamond {
+    overflow: hidden;
+    float: left;
+    margin-right: 60px;
+}
+.cbp-qtrotator .cbp-qtcontent img {
+    max-width: 140px;
+    height:auto;
+    display: block;
+}
+.cbp-qtrotator {
+    background-color: rgba(65,65,65,0.9);
+}
+.cbp-qtrotator .cbp-qtcontent {
+    border-top: 3px solid rgba(255, 255, 255, 0.1);
+}
+.cbp-qtprogress {
+    background: rgba(255,255,255,0.3);
+}
+.cbp-qtrotator p{
+    color: #fff;
+}
+.cbp-qtrotator .blockquote .footer{
+    color: #eb5656;
+}
+@-webkit-keyframes fade {
+   from {opacity: .4}
+   to {opacity: 1}
+ }
+@keyframes fade {
+   from {opacity: .4}
+   to {opacity: 1}
+ }
+ </style>
+
+ <div class="header">
+    <!--Bắt Đầu Navbar-->
+    <div class="navbar">
+        <a href="index.html"><i class="fa fa-fw fa-home"></i>Trang Chủ</a>
+        <a href="info/index.html">Thành Viên Nhóm</a>
+        <div class="dropdown">
+          <button class="dropbtn">Đồ Án 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a class="active" href="muon/index.html" style="color: white;">Thông Tin Mượn</a>
+            <a  href="tra/index.html"style="color: white;">Thông Tin Trả</a>
+            <a href="saoke/index.html"style="color: white;">Thống Kê</a>
+          </div>
+        </div>
+        <a href="lienhe/index.html">Liên Hệ</a>
+      </div>
+    <!--Kết Thúc Navbar-->
+
+    <div style="width:100%;max-width: 1000px;    position: relative;">
+            <!--Bắt Đầu Banner-->
+        <div class="banner" style="width:50%">
+            <div class="noi-dung">
+                <h1>Đồ Án Học Phần IoT Và Ứng Dụng</h1>
+                <h3>Quản Lý Mượn - Trả Sách Trực Tuyến Tại Thư Viện Thành Phố Cần Thơ</h3>
+            </div>
+            <div class="btn-group">
+                <div class="signup-btn"><a href="#">Đăng Ký Thành Viên</a></div>
+                <div class="play-btn">
+                    <div class="play-btn-inner">
+                        <a href="#"><i class="fa fa-play"></i></a>
+                    </div>
+                    <span>Giới Thiệu</span>
+                </div>
+            </div>
+        </div>
+       <!--Kết Thúc Banner-->  
+
+     <!-- Bắt Đầu Slideshow -->
+        <div class="slideshow-container" style="width:50%">
+                        <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <img src="https://i.imgur.com/8pOsJnH.jpg" style="width:100%">
+                        <div class="text">Giúp bạn trở thành thành viên của thư viện chúng tôi</div>
+                        </div>
+                        <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <img src="https://i.imgur.com/G9vzsRS.jpg" style="width:100%">
+                        <div class="text">Việc tìm kiếm, đăng ký mượn, hẹn trả sách dễ dàng hơn</div>
+                        </div>
+                        <div class="mySlides fade">
+                        <div class="numbertext"></div>                      
+                        <img src="https://i.imgur.com/HqhccHR.jpg" style="width:100%">
+                        <div class="text">Hãy góp ý và đánh giá chất lượng phục vụ để chúng tôi có thể hỗ trợ các bạn tốt nhất</div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        <br>
+                        <div style="text-align:center;margin-top: 20px">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>                
+        </div>
+
+    </div>
+</div>
+ <!-- Kết Thúc Slideshow -->
+ <!-- Bắt Đầu Giới Thiệu -->
+ <div class="pagecontent">
+    <div class="half-box">
+            <div id="accordion-container">
+                <div class="accordion-header inactive-header">Giới thiệu tổng quan về ứng dụng</div>
+                <div class="accordion-content" style="display: none;">
+                    <p>- Ứng dụng quản lý thư viện có thể quản lý được thông tin của khách hàng khi họ mượn sách, trả sách một cách dễ dàng và dễ quản lý thông tin của người mượn sách.</p>
+                </div>
+                <div class="accordion-header inactive-header">Giải pháp thực hiện</div>
+                <div class="accordion-content" style="display: none;">
+                    <p>- Để dễ cho quá trình thực hiện làm việc làm trang web quản lý thư viện. Nên nhóm chỉ quản lý 3 quyển sách với thông tin như sau: người mượn hoặc người trả, số điện thoại</p>
+                </div>
+            </div>
+
+        </div>
+            <div class="accordion-header inactive-header">
+                Sử dụng 3 channel để quản lý 3 quyển sách. Mỗi channel có 3 trường
+            </div>
+            <div class="accordion-content" style="display: none;">
+               <ol class="rounded-list">
+                <li><span>Trường 1: Họ Tên</span>
+                </li>
+                <li><span>Trường 2: Số Điện Thoại</span>
+                </li>
+                <li><span>Trường 3: Mượn Trả ( 0: mượn, 1: trả)</span>
+                </li>
+            </ol> 
+          </div>  
+        </div>
+    </div>
+</div>
+ <!-- Kết Thúc Giới Thiệu -->
+ <!-- Bắt Đầu Đánh Giá-->
+<div class="subtitle light">
+    <h3>Đánh Giá</h3>
+</div>
+<div id="rotator-container" style="position: relative; z-index: 0; background: none;">
+    <div id="cbp-qtrotator" class="cbp-qtrotator">
+        <div class="cbp-qtcontent cbp-qtcurrent" style="transition: opacity 700ms ease 0s;">
+            <div class="img-diamond">
+                <img src="https://i.imgur.com/JfQgbvH.png" alt="">
+            </div>
+            <div class="blockquote">
+                <p>Sách cũ, giấy đen, không còn đọc được, nhưng nó lại có giá trị của những trang nhật ký cuộc đời. Nó là kỷ niệm, là nhắc nhớ, là những cuốn sách không phải để đọc mà để nghĩ ngợi, để suy tư, để ngẩn ngơ cùng năm tháng đời người. Bán chúng làm chi. Vì giữ chúng thì chật nhà nhưng không có chúng, cuộc đời ta bỗng hóa ra buồn tênh, trống rỗng</p>
+            <br>
+                <div class="footer">Nguyễn Nhật Ánh</div>
+            </div>
+        </div>
+    <span class="cbp-qtprogress" style="transition: width 7000ms linear 0s; width: 100%;"></span></div>
+<div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 306px; width: 1000px; z-index: -999998; position: absolute;"><img src="https://i.imgur.com/jsL73i1.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1000px; height: 453.2px; max-height: none; max-width: none; z-index: -999999; left: 0px; top: -68.6px;"></div></div>
+<!-- Kết Thúc Đánh Giá-->
+<!-- Bắt Đầu Dịch Vụ-->
+<div class="dich-vu">
+    <ul>
+        <li>
+            <img src="https://i.imgur.com/4iCIMUK.png">
+            <h1>Đặt Hàng</h1>
+            <p>Xem sách và đặt hàng trước để tiết kiệm thời gian cho bạn</p>
+            <a class="read_more" href="#">Đặt Hàng</a>
+        </li>
+        <li>
+            <img src="https://i.imgur.com/iJ1jVAv.png">
+            <h1>Thuê - Mượn</h1>
+            <p>Quá trình thuê mượn thật dễ dàng, hãy liên hệ nếu bạn cần hỗ trợ</p>
+            <a class="read_more" href="#">Thuê Mượn</a>
+        </li>
+        <li>
+            <img src="https://i.imgur.com/Ay6jacU.png"alt="">
+            <h1>Đánh Giá</h1>
+            <p>Hãy đánh giá chất lượng phục vụ để chúng tôi có thể hỗ trợ bạn tốt nhất</p>
+            <a class="read_more" href="#">Đánh Giá</a>
+        </li>
+    </ul>
+</div>
+<!--Kết Thúc Dịch Vụ-->
+
+<!-- Bắt Đầu Footer -->
+ <footer>
+    <div class="container">
+        <div class="noi-dung about">
+           <h2>Về Chúng Tôi</h2>
+           <div class="links" style="width:100%">
+            <ul>
+                <li><a href="#">Nhóm 2 - Ngành Quản Lý Công Nghiệp</a></li>
+                <li><a href="#">Lê Hữu Nam</a></li>
+                <li><a href="#">Lâm Ngọc Trúc</a></li>
+                <li><a href="#">Phùng Yến Trinh</a></li>
+                <li><a href="#">Nguyễn Minh Khoa</a></li>
+                <li><a href="#">Trần Ngọc Minh Thư</a></li>
+            </ul>
+           </div>
+        </div>
+        <div class="noi-dung links">
+             <h2>Đường Dẫn</h2>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Thông Tin Liên Lạc</a></li>
+                <li><a href="#">Dịch Vụ</a></li>
+                <li><a href="#">Đánh Giá</a></li>
+                <li><a href="#">Điều Kiện Chính Sách</a></li>
+            </ul>
+        </div>
+        <div class="noi-dung contact">
+            <h2>Thông Tin Liên Hệ</h2>
+            <ul class="info">
+                <li>
+                    <span><i class="fa fa-map-marker"></i></span>
+                    <span>Khoa Công Nghệ - Đại Học Cần Thơ</span>
+                </li>
+                <li>
+                    <span><i class="fa fa-phone"></i></span>
+                    <span><a href="#">0 105 050505</a></span>
+                </li>
+                <li>
+                    <span><i class="fa fa-envelope"></i></span>
+                    <span><a href="#">nhom2@student.ctu.vn</a></span>
+               </li>
+                <li>
+                    <form class="form">
+                        <input type="email" class="form__field" placeholder="Đăng Ký Tin Miễn Phí" />
+                        <button type="button" class="btn btn--primary  uppercase">Gửi</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="footer-info">
+        <!-- COPYRIGHT -->
+        <div class="credits">Copyright © 2022 Nhóm 2. All Rights Reserved</div>
+        <!-- SOCIAL ICONS -->
+        <ul class="social-icons">
+            <li>
+                <a href="#">
+                    <img class="social-icon" src="https://i.imgur.com/Fwmmwp3.png" alt="Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="social-icon" src="https://i.imgur.com/4BXQaNL.png" alt="Twitter">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="social-icon" src="https://i.imgur.com/NO2zdfF.png" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img class="social-icon" src="https://i.imgur.com/pgbkPd3.png" alt="YouTube">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</footer>
+<!-- Kết Thúc Footer -->
+
+
+
+ <body>
+ </body>
+ </html>
+ <!-- Bắt Đầu Javascript -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script> 
+ <script>
+ var slideIndex = 1;
+ showSlides(slideIndex);
+function plusSlides(n) {
+   showSlides(slideIndex += n);
+ }
+function currentSlide(n) {
+   showSlides(slideIndex = n);
+ }
+function showSlides(n) {
+   var i;
+   var slides = document.getElementsByClassName("mySlides");
+   var dots = document.getElementsByClassName("dot");
+   if (n > slides.length) {slideIndex = 1}
+   if (n < 1) {slideIndex = slides.length}
+   for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+   }
+   for (i = 0; i < dots.length; i++) {
+       dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";
+   dots[slideIndex-1].className += " active";
+ }
+ $(document).ready(function() {  
+
+    setInterval(function(){ 
+       $('.slideshow-container .next').click();
+    }, 
+    2500);
+    
+    $('.accordion-header').click(function () {
+        if ($(this).is('.inactive-header')) {
+            $('.active-header').toggleClass('active-header').toggleClass('inactive-header').next().slideToggle().toggleClass('open-content');
+            $(this).toggleClass('active-header').toggleClass('inactive-header');
+            $(this).next().slideToggle().toggleClass('open-content');
+        }
+        else {
+            $(this).toggleClass('active-header').toggleClass('inactive-header');
+            $(this).next().slideToggle().toggleClass('open-content');
+        }
+    });
+});
+</script>
+<!-- Kết Thúc Javascript -->

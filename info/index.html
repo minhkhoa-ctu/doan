@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bieu tuong nhom-->
+    <link rel="icon" type="image/x-icon" href="https://png.pngtree.com/png-vector/20190214/ourlarge/pngtree-people-icon-business-corporate-team-working-together-social-network-png-image_448341.jpg">
+
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- FOnt Awesome -->
+    <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
+
+    <title>Thành viên</title>
+
+    <style>
+      body {
+        background-color: #FFF8DC;
+        margin: 200;
+        font-family: Times new roman , sans-serif;
+        font-size: 150%;
+      }
+
+
+      /* Style the top navigation bar */
+      .navbar {
+        overflow: hidden;
+        background-color: black;
+      }
+
+      .navbar a {
+        float: left;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      /* Current/active navbar link */
+      .active {
+        background-color: #04AA6D;
+      }
+
+      /* Style the content */
+      .content {
+        background-color: #ddd;
+        padding: 10px;
+      }
+
+      /* Style the footer */
+      .footer {
+        background-color: white;
+        padding: 10px;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 20px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: black;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: green;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /**********************************/
+      #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+      #customers tr:hover {background-color: #ddd;}
+
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+      }
+
+    </style>
+</head>
+
+
+<body>
+
+
+
+ <div class="navbar">
+      <a href="../index.html"><i class="fa fa-fw fa-home"></i>Trang chủ</a>
+      <a href="index.html">Thành viên nhóm</a>
+      <div class="dropdown">
+        <button class="dropbtn">Đồ án 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a class="active" href="../muon/index.html" style="color: white;">Thông tin mượn</a>
+          <a href="../tra/index.html"style="color: white;">Thông tin trả</a>
+          <a href="../saoke/index.html"style="color: white;">Số liệu thống kê</a>
+        </div>
+      </div>
+      <a href="../lienhe/index.html">Liên hệ</a>
+    </div>
+
+
+    <div class="container" class= "center">
+        <div class="section-title">
+            <h1>Thành viên của nhóm</h1>
+        </div>
+
+        <div class="row">
+
+
+            <div class="column">
+                <div class="team">
+                    <div class="team-img">
+                        <img src="image/khoa.png" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h5>Nguyễn Minh Khoa</h5>
+                        <p>Tổng hợp và thống kê</p>                      
+                        <p>MSSV: B1907145</p>
+                        <p>Ngành: Cơ Điện Tử</p>
+                        <p>khoab1907145@student.ctu.edu.vn</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#" class="social-tw"> <i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-fb"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-li"> <i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-in"> <i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-yt"> <i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="team">
+                    <div class="team-img">
+                        <img src="image/trinh.png" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h5>Phùng Yến Trinh </h5>
+                        <p>Thành viên và công việc</p>
+                        <p>MSSV: B1906017</p>
+                        <p>Ngành: Quản lý Công Nghiệp </p>
+                        <p>trinhb1906017@student.ctu.edu.vn</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#" class="social-tw"> <i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-fb"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-li"> <i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-in"> <i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-yt"> <i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column" >
+                <div class="team">
+                    <div class="team-img">
+                        <img src="image/thu.jpg" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h5>Trần Ngọc Minh Thư</h5>
+                        <p>Trang liên hệ</p>
+                        <p>MSSV: B1906003</p>
+                        <p>Ngành: Quản lý Công Nghiệp </p>
+                        <p>thub1906003@student.ctu.edu.vn</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#" class="social-tw"> <i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-fb"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-li"> <i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-in"> <i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-yt"> <i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+                  <div class="column">
+                <div class="team">
+                    <div class="team-img">
+                        <img src="image/nam.png" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h5>Lê Hữu Nam</h5>
+                        <p>Thông tin mượn, Thông tin trả</p>
+                        <p>MSSV: B1905792</p>
+                        <p>Ngành: Quản lý Công Nghiệp </p>
+                        <p>namb1905792@student.ctu.edu.vn</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#" class="social-tw"> <i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-fb"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-li"> <i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-in"> <i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-yt"> <i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column"  >
+             </div>   
+            <div class="column"  >
+                 <div class="team">
+                     <div class="team-img">
+                        <img src="image/truc.png" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h5>Lâm Ngọc Trúc</h5>
+                        <p>Trang chủ</p>
+                        <p>MSSV: B1906018</p>
+                        <p>Ngành: Quản lý Công Nghiệp </p>
+                        <p>trucb1906018@student.ctu.edu.vn</p>
+                    </div>
+                    <div class="team-social">
+                        <a href="#" class="social-tw"> <i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-fb"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-li"> <i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-in"> <i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-yt"> <i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+</body>
+</html>
